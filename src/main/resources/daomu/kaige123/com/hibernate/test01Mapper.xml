@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+    <class name="daomu.kaige123.com.hibernate.BeanTest01" table="test01">
+        <id name="uid" type="java.lang.Integer">      <!--Bean字段-->
+            <column name="uid"/>                      <!--数据库字段. 字段与字段映射-->
+            <!-- 指定主键的生成方式，native使用数据库本地方式 -->
+            <generator class="native"/>
+        </id>
+        <property name="user" type="java.lang.String">
+            <column name="user"/>
+        </property>
+        <property name="address" type="java.lang.String">
+            <column name="address"/>
+        </property>
+        <property name="phone" type="java.lang.String">
+            <column name="phone"/>
+        </property>
+    </class>
+</hibernate-mapping>
